@@ -1,0 +1,49 @@
+解压命令:tar -zxvf aa.tar.gz -C /home
+reboot 重启
+ls -a 显示所有文件（包括隐藏文件）
+rm -rf  可删除隐藏文件
+cd .. 返回上一级目录
+cd ../..返回上两级目录
+vi -r xxx.swp   恢复.swp文件   然后需要再删除
+1.使用mv命令剪切文件。
+如需要将/home/wwwroot/sinozzz123/music/目录下的1.mp3文件剪切到/home/wwwroot/sinozzz123/abc目录下，执行下面的命令即可：
+# mv /home/wwwroot/sinozzz123/music/1.mp3 /home/wwwroot/sinozzz123/abc
+改名★
+将文件test.txt重命名为wbk.txt：
+$ mv test.txt wbk.txt
+linux下删除文件夹的命令
+使用rm -rf 目录名字 命令即可
+
+-r 就是向下递归，不管有多少级目录，一并删除
+-f 就是直接强行删除，不作任何提示的意思
+
+linux下常用的关机命令有：shutdown、halt、poweroff、init；重启命令有：reboot。
+/etc/profile:此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行.并从/etc/profile.d目录的配置文件中搜集shell的设置.
+~/.bash_profile:每个用户都可使用该文件输入专用于自己使用的shell信息,当用户登录时,该文件仅仅执行一次!默认情况下,他设置一些环境变量,执行用户的.bashrc文件.
+
+command & 直接在后台运行程序
+
+ctrl+c退出前台的命令,不再执行
+
+ctrl+z挂起前台命令暂停执行，回到shell命令行环境中
+
+bg  将刚挂起的命令放到后台运行
+
+bg %3 将第三个job放到后台运行
+
+kill %3? 杀死第三个job，不再执行
+
+fg 将刚挂起的命令返回前台运行
+
+fg %3 将第三个job返回前台运行
+
+jobs 察看当前shell下运行的所有程序；带+表示最新的jobs；带-表示次新的jobs；其他jbbs不带符号
+
+nohup=no hang up，不挂断，如果你正在运行一个进程，而且你觉得在退出帐户时该进程还不会结束，
+那么可以使用nohup命令。该命令可以在你退出帐户/关闭终端之后继续运行相应的进程.长命令必须写在shell文件中，
+否则nohup不起作用
+
+nohup command &    //该命令的一般形式
+
+nohup command > myout.file 2>&1 & //log输出到myout.file，并将标准错误输出重定向到标准输出，再被重定向到myout.file
+
